@@ -1,0 +1,11 @@
+{
+  "name": "real-time-chat",
+  "version": "0.0.1",
+  "description": "This is a real time chat application",
+  "dependencies": {
+    "socket.io": "latest",
+    "express": "latest",
+    "jade": "latest"
+  },
+  "author": "Serena Liu"
+}
