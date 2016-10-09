@@ -1,15 +1,9 @@
 doctype html
 html
     head
-        title= "Real-time Chatting"
-        link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
-        link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css')
-        link(rel='stylesheet', href='/css/style.css')
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="/bootstrap/css/bootstrap-responsive.css")
-        //script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
-        script(src='/bootstrap/js/bootstrap.min.js')
+        include ./head
     body
+        include ./header
         div#wrap.panel
             div.panel-heading
                 h3.panel-title="Welcome to Real-time Chatting Room"
@@ -27,5 +21,7 @@ html
                         .input-group
                             input#field.span3(type="text" placeholder="Please enter your message!")
                             input#send.btn(type='button', value='Send')
+        include ./footer
+        
         script(src='/js/chat.js')
         script(src='/socket.io/socket.io.js')

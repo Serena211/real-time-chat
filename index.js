@@ -35,7 +35,7 @@ console.log("Listening on port " + port);
 
 // Socket.io connection handler
 io.sockets.on('connection', function (socket) {
-    socket.emit('message', { message: 'welcome to real time chat' });
+    socket.emit('message', { message: 'welcome to real-time chat' });
     socket.on('send', function (data) {
         io.sockets.emit('message', data);
     });
