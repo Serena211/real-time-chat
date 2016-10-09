@@ -1,15 +1,31 @@
 doctype html
 html
     head
-        title= "Real time web chat"
-        script(src='/chat.js')
-        script(src='/socket.io/socket.io.js')
+        title= "Real-time Chatting"
+        link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css')
+        link(rel='stylesheet', href='/css/style.css')
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/bootstrap/css/bootstrap-responsive.css")
+        //script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+        script(src='/bootstrap/js/bootstrap.min.js')
     body
-        #content(style='width: 500px; height: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;')
-        .controls
-            | Name:
-            input#name(style='width:350px;')
-            br
-            | Message:
-            input#field(style='width:350px;')
-            input#send(type='button', value='send')
+        div#wrap.panel
+            div.panel-heading
+                h3.panel-title="Welcome to Real-time Chatting Room"
+            div.panel-body
+                div#content
+
+        form.bs-example.bs-example-form.controls
+                .row
+                    .col-lg-6
+                        .input-group
+                            span#basic-addon1.input-group-addon="UserName @ "
+                            input#name.form-control(type="text" placeholder="Please enter your name!")
+                .row
+                    .col-lg-6
+                        .input-group
+                            input#field.span3(type="text" placeholder="Please enter your message!")
+                            input#send.btn(type='button', value='Send')
+        script(src='/js/chat.js')
+        script(src='/socket.io/socket.io.js')
