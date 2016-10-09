@@ -13,3 +13,6 @@
 2. What to do next:
 
   - Apply Bootstrap
+  - Log in/out
+  - User Auth
+  - 
